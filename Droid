@@ -2,13 +2,13 @@ public class Droid{
   //main method
   public static void main(String [ ] args){
     /*
-    						    	 CREATING AN OBJECT			
+    		 CREATING AN OBJECT			
     */
     Droid myDroid = new Droid();
     
     /*
-    										CALLING METHODS
-              	 objectName.methodName-dataType
+    					CALLING METHODS
+           objectName.methodName-dataType
     
     */
     myDroid.activate();
@@ -19,7 +19,7 @@ public class Droid{
   int batteryLevel;
   
   /*
-  									 CREATING A CONSTRUCTOR
+  					CREATING A CONSTRUCTOR
   */
   
   public Droid(){
@@ -27,8 +27,8 @@ public class Droid{
   }
   
   /*
-                      CREATING A METHOD
-            public dataType/void methodName-dataType
+           CREATING A METHOD
+    public dataType/void methodName-dataType
                   
   */
   
