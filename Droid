@@ -1,0 +1,71 @@
+public class Droid{
+  //main method
+  public static void main(String [ ] args){
+    /*
+    						    	 CREATING AN OBJECT			
+    */
+    Droid myDroid = new Droid();
+    
+    /*
+    										CALLING METHODS
+              	 objectName.methodName-dataType
+    
+    */
+    myDroid.activate();
+    myDroid.chargeBattery(5);
+    myDroid.hover(1);
+  }
+  
+  int batteryLevel;
+  
+  /*
+  									 CREATING A CONSTRUCTOR
+  */
+  
+  public Droid(){
+    batteryLevel = 100;
+  }
+  
+  /*
+                      CREATING A METHOD
+            public dataType/void methodName-dataType
+                  
+  */
+  
+  public void chargeRemaining(int batteryLevel){
+    System.out.println("Your droid now has " + batteryLevel +"% battery life remaining.");
+  }
+  
+  public void activate(){
+    System.out.println("Activated. How can I help you?");
+    
+    batteryLevel = batteryLevel - 5;
+    
+    Thread.sleep(2000);
+    chargeRemaining(batteryLevel);
+  }
+  
+  public void chargeBattery(int hours){
+    System.out.println("Drone is charging...");
+    
+    batteryLevel = batteryLevel + hours;
+    
+    if(batteryLevel > 100){
+      batteryLevel = 100;
+      System.out.println("Your droid now has " + batteryLevel +"% battery life remaining.");
+    }else{
+      chargeRemaining(batteryLevel);
+    }
+  }
+  
+  public void hover(int feet){
+    if(feet > 2){
+      System.out.println("Error! I cannot hover above 2 feet.");
+    }else{
+      System.out.println("Hovering...");
+      batteryLevel = batteryLevel - 20;
+      
+      chargeRemaining(batteryLevel);
+    }
+  } 
+}
